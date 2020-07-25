@@ -1,0 +1,55 @@
+//Media Query Manager
+/*
+0-600px: phone
+600-900px: tablet portrait
+900-1200px: tablet landscape
+[1200-1800] is where our normal styles apply
+1800px+: big desktop
+*/
+
+//1em =16px
+
+@mixin respond($breakspoint) {
+  @if $breakspoint == phone {
+    @media screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakspoint == tab-port {
+    @media screen and (max-width: 52.25em) {
+      @content;
+    }
+  }
+  @if $breakspoint == tab-land {
+    @media screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakspoint == big-desktop {
+    @media screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+// @mixin respond($breakspoint) {
+//   @if $breakspoint == phone {
+//     @media screen and (max-width: 600px) {
+//       @content;
+//     }
+//   }
+//   @if $breakspoint == tab-port {
+//     @media screen and (max-width: 900px) {
+//       @content;
+//     }
+//   }
+//   @if $breakspoint == tab-land {
+//     @media screen and (max-width: 1200px) {
+//       @content;
+//     }
+//   }
+//   @if $breakspoint == big-desktop {
+//     @media screen and (min-width: 1800px) {
+//       @content;
+//     }
+//   }
+// }

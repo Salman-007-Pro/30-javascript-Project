@@ -1,0 +1,50 @@
+/*
+0-600px: phone
+600-900px: tablet portrait
+900-1200px: tablet landscape
+[1200-1800] is where our normal styles apply
+1800px+: big desktop
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+  @media screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media screen and (max-width: 52.25em) {
+    html {
+      font-size: 50%; } }
+  @media screen and (min-width: 112.5em) {
+    html {
+      font-size: 65%; } }
+
+.hello-world {
+  border: 1px solid red; }
+
+.border-red {
+  border: 1px solid red; }
+
+.border-blue {
+  border: 1px solid blue; }
+
+.border-green {
+  border: 1px solid green; }
+
+.border-yellow {
+  border: 1px solid yellow; }
+
+.margin-zero {
+  margin: 0 !important; }
+
+.padding-zero {
+  padding: 0 !important; }
+
+.fixed-height {
+  height: 90vh !important; }

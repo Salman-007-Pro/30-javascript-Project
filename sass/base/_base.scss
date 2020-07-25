@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  // 1rem = 10px so; we convert into percentage 10/16*100
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  //1200px
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px so; 9/16
+  }
+  //900px
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px so; 8/16
+  }
+
+  //1800px +
+  @include respond(big-desktop) {
+    font-size: 65%;
+  }
+}
+.hello-world {
+  border: 1px solid red;
+}
